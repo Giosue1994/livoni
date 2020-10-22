@@ -7,16 +7,77 @@
   font-family: Stratos-similar;
 }
 
-/* ________ REGOLE GENERALI ________ */
-
-body {
-  font-size: 100px;
-  background-color: red;
-}
+/* ________ GENERAL ________ */
 
 /* Secondary font class */
 
 .neue {
   font-family: Neue-similar;
+}
+
+body {
+  background-color: #F7F7F5;
+}
+
+.container {
+  padding: 0 216px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1234;
+  top: 0;
+  left: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 113px 0;
+}
+
+header nav button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main #jumbo {
+  margin-top: 282px;
+}
+
+main #jumbo .jumbo-container {
+  position: relative;
+}
+
+main #jumbo .jumbo-container img {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+main #jumbo .jumbo-container img.poltrona {
+  top: -50px;
+}
+
+main #jumbo .jumbo-container img.sedia {
+  top: 15px;
+  left: 55%;
+}
+
+main #jumbo .jumbo-container img.tre-sedie {
+  width: 500px;
+  top: 65px;
+}
+
+main #jumbo .jumbo-container img.spalliere {
+  top: -40px;
+  left: 57%;
 }
 

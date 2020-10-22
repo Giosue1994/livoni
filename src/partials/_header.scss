@@ -1,4 +1,22 @@
 // HEADER
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 1234;
+  top: 0;
+  left: 0;
 
+  //Navbar
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 113px 0;
+
+    button {
+      @include transparent_button;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
 }
