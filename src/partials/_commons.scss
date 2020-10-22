@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $primary-font;
+  font-size: $primary-font-size;
 }
 
 /* ________ GENERAL ________ */
@@ -16,11 +17,34 @@ body {
   background-color: $body-color;
 }
 
-// img {
-//   width: 100%;
-//   display: block;
-// }
+.language {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: rotate(-90deg);
+  z-index: 12345;
+}
 
 .container {
-  padding: 0 216px;
+  padding: 0 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.title-image {
+  @include center_element;
+  font-size: 69px;
+  color: rgba(255, 255, 255, 0.6);
 }

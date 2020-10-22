@@ -1,4 +1,36 @@
-// FOOTER
+/* FOOTER */
 footer {
+  background-color: #90968B;
+  color: white;
+  padding: 120px 0;
 
+  .heading {
+    text-align: center;
+    padding: 200px 0;
+    h2 {
+      font-size: 143px;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+
+    .col {
+      ul {
+        padding-right: 50px;
+      }
+
+      li, span {
+        font-family: Neue-similar;
+        font-size: $small-size;
+        font-weight: bold;
+      }
+
+      i {
+        font-size: $small-size;
+        padding: 0 10px;
+      }
+    }
+  }
 }

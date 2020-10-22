@@ -1,33 +1,232 @@
-// MAIN
+/* MAIN */
 main {
+  /* JUMBO SECTION */
   #jumbo {
     margin-top: 282px;
 
     .jumbo-container {
       position: relative;
+      height: 570px;
 
       img {
-        width: 350px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        width: 19%;
+        @include center_element;
         transform: translate(-50%, 0);
 
-        &.poltrona {
+        &.sedia {
           top: -50px;
         }
-        &.sedia {
+        &.poltrona {
           top: 15px;
           left: 55%;
         }
         &.tre-sedie {
-          width: 500px;
+          width: 28%;
           top: 65px;
         }
         &.spalliere {
           top: -40px;
           left: 57%
         }
+      }
+    }
+
+    .since {
+      text-align: center;
+    }
+  }
+
+  /* STORY SECTION */
+  #story {
+    margin: 235px;
+    text-align: center;
+
+    .story-container {
+      p {
+        width: 75%;
+        margin: auto;
+        padding-bottom: 50px;
+        font-size: $medium-size;
+      }
+
+      span {
+        font-size: $small-size;
+      }
+    }
+  }
+
+  /* PHILOSOPHY SECTION */
+  #philosophy {
+    .philosophy-container {
+      position: relative;
+
+      .col {
+        width: 50%;
+
+        &.philosophy-text {
+          padding: 230px;
+          position: absolute;
+          top: 0;
+          width: 50%;
+        }
+        &.products {
+          float: right;
+          background-color: #D1CCC7;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 120px;
+
+          .box {
+            position: relative;
+
+            img {
+              width: 500px;
+              padding-top: 120px;
+            }
+
+            .title-image {
+              top: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* REFERENCES SECTION */
+  #references {
+    clear: both;
+
+    .references-container {
+      background-color: #BCBCBC;
+      text-align: center;
+      padding: 120px 120px 60px;
+
+      .box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+
+        img {
+          width: 70%;
+          display: block;
+        }
+
+        .arrow {
+          position: absolute;
+          bottom: 130px;
+          right: 270px;
+          width: 80px;
+        }
+      }
+
+      h6 {
+        font-size: $small-size;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+
+  /* MAGAZINE SECTION */
+  #magazine {
+
+    .magazine-container {
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        &:first-of-type {
+          align-items: center;
+          padding: 60px 100px;
+          background-color: #F0EBE6;
+
+          .heading {
+            display: flex;
+            align-items: flex-end;
+
+            h2 {
+              font-size: $medium-size;
+            }
+
+            p {
+              font-size: $small-size;
+              padding-left: 70px;
+            }
+          }
+
+          .arrows {
+            img {
+              padding: 0 10px;
+            }
+          }
+        }
+
+        .col {
+          width: calc(100% / 3);
+          padding: 60px 100px;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+
+            .image-card {
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                object-fit: none;
+
+                &.img-left {
+                  height: 600px;
+                  object-position: 50% 120%;
+                }
+                &.img-center {
+                  height: 350px;
+                  object-position: 0 80%;
+                }
+                &.img-right {
+                  height: 450px;
+                  object-position: 0 45%;
+                }
+              }
+            }
+
+            .description {
+              p {
+                padding: 10px 0;
+              }
+
+              a {
+                font-size: $small-size;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* NEWSLETTER SECTION */
+  #newsletter {
+    background-color: #D6D7D1;
+    text-align: center;
+    padding: 100px 0;
+
+    p {
+      width: 50%;
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 69px;
+
+      img {
+        vertical-align: super;
       }
     }
   }

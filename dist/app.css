@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Stratos-similar;
+  font-size: 28px;
 }
 
 /* ________ GENERAL ________ */
@@ -19,8 +20,39 @@ body {
   background-color: #F7F7F5;
 }
 
+.language {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: rotate(-90deg);
+  z-index: 12345;
+}
+
 .container {
-  padding: 0 216px;
+  padding: 0 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.title-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 69px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 header {
@@ -41,9 +73,24 @@ header nav button {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+
+header nav #logo img {
+  position: relative;
+  left: -17%;
+}
+
+/* MAIN */
+
+main {
+  /* JUMBO SECTION */
+  /* STORY SECTION */
+  /* PHILOSOPHY SECTION */
+  /* REFERENCES SECTION */
+  /* MAGAZINE SECTION */
+  /* NEWSLETTER SECTION */
 }
 
 main #jumbo {
@@ -52,32 +99,260 @@ main #jumbo {
 
 main #jumbo .jumbo-container {
   position: relative;
+  height: 570px;
 }
 
 main #jumbo .jumbo-container img {
-  width: 350px;
+  width: 19%;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   transform: translate(-50%, 0);
 }
 
-main #jumbo .jumbo-container img.poltrona {
+main #jumbo .jumbo-container img.sedia {
   top: -50px;
 }
 
-main #jumbo .jumbo-container img.sedia {
+main #jumbo .jumbo-container img.poltrona {
   top: 15px;
   left: 55%;
 }
 
 main #jumbo .jumbo-container img.tre-sedie {
-  width: 500px;
+  width: 28%;
   top: 65px;
 }
 
 main #jumbo .jumbo-container img.spalliere {
   top: -40px;
   left: 57%;
+}
+
+main #jumbo .since {
+  text-align: center;
+}
+
+main #story {
+  margin: 235px;
+  text-align: center;
+}
+
+main #story .story-container p {
+  width: 75%;
+  margin: auto;
+  padding-bottom: 50px;
+  font-size: 48px;
+}
+
+main #story .story-container span {
+  font-size: 19px;
+}
+
+main #philosophy .philosophy-container {
+  position: relative;
+}
+
+main #philosophy .philosophy-container .col {
+  width: 50%;
+}
+
+main #philosophy .philosophy-container .col.philosophy-text {
+  padding: 230px;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+main #philosophy .philosophy-container .col.products {
+  float: right;
+  background-color: #D1CCC7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px;
+}
+
+main #philosophy .philosophy-container .col.products .box {
+  position: relative;
+}
+
+main #philosophy .philosophy-container .col.products .box img {
+  width: 500px;
+  padding-top: 120px;
+}
+
+main #philosophy .philosophy-container .col.products .box .title-image {
+  top: 30%;
+}
+
+main #references {
+  clear: both;
+}
+
+main #references .references-container {
+  background-color: #BCBCBC;
+  text-align: center;
+  padding: 120px 120px 60px;
+}
+
+main #references .references-container .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+main #references .references-container .box img {
+  width: 70%;
+  display: block;
+}
+
+main #references .references-container .box .arrow {
+  position: absolute;
+  bottom: 130px;
+  right: 270px;
+  width: 80px;
+}
+
+main #references .references-container h6 {
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+}
+
+main #magazine .magazine-container .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+main #magazine .magazine-container .row:first-of-type {
+  align-items: center;
+  padding: 60px 100px;
+  background-color: #F0EBE6;
+}
+
+main #magazine .magazine-container .row:first-of-type .heading {
+  display: flex;
+  align-items: flex-end;
+}
+
+main #magazine .magazine-container .row:first-of-type .heading h2 {
+  font-size: 48px;
+}
+
+main #magazine .magazine-container .row:first-of-type .heading p {
+  font-size: 19px;
+  padding-left: 70px;
+}
+
+main #magazine .magazine-container .row:first-of-type .arrows img {
+  padding: 0 10px;
+}
+
+main #magazine .magazine-container .row .col {
+  width: calc(100% / 3);
+  padding: 60px 100px;
+}
+
+main #magazine .magazine-container .row .col .card {
+  display: flex;
+  flex-direction: column;
+}
+
+main #magazine .magazine-container .row .col .card .image-card {
+  overflow: hidden;
+}
+
+main #magazine .magazine-container .row .col .card .image-card img {
+  width: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+main #magazine .magazine-container .row .col .card .image-card img.img-left {
+  height: 600px;
+  -o-object-position: 50% 120%;
+     object-position: 50% 120%;
+}
+
+main #magazine .magazine-container .row .col .card .image-card img.img-center {
+  height: 350px;
+  -o-object-position: 0 80%;
+     object-position: 0 80%;
+}
+
+main #magazine .magazine-container .row .col .card .image-card img.img-right {
+  height: 450px;
+  -o-object-position: 0 45%;
+     object-position: 0 45%;
+}
+
+main #magazine .magazine-container .row .col .card .description p {
+  padding: 10px 0;
+}
+
+main #magazine .magazine-container .row .col .card .description a {
+  font-size: 19px;
+}
+
+main #newsletter {
+  background-color: #D6D7D1;
+  text-align: center;
+  padding: 100px 0;
+}
+
+main #newsletter p {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+main #newsletter h2 {
+  font-size: 69px;
+}
+
+main #newsletter h2 img {
+  vertical-align: super;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #90968B;
+  color: white;
+  padding: 120px 0;
+}
+
+footer .heading {
+  text-align: center;
+  padding: 200px 0;
+}
+
+footer .heading h2 {
+  font-size: 143px;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .row .col ul {
+  padding-right: 50px;
+}
+
+footer .row .col li,
+footer .row .col span {
+  font-family: Neue-similar;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+footer .row .col i {
+  font-size: 19px;
+  padding: 0 10px;
 }
 

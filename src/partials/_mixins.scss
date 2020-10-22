@@ -4,3 +4,11 @@
   border: none;
   outline: none;
 }
+
+// CENTER ELEMENT
+@mixin center_element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

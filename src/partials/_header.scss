@@ -14,9 +14,15 @@ header {
 
     button {
       @include transparent_button;
-      font-size: 28px;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    #logo {
+      img {
+        position: relative;
+        left: -17%;
+      }
     }
   }
 }

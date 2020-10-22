@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="https://www.livoni.it/cms/wp-content/uploads/cropped-livoni-thumb-32x32.jpg" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="dist/app.css">
     <title>Livoni</title>
 
@@ -31,7 +32,7 @@
         <!-- Navbar -->
         <nav>
           <button class="neue" id="collections">COLLEZIONI</button>
-          <div class="logo">
+          <div id="logo">
             <img src="img/logo.png" alt="">
           </div>
           <button class="neue" id="menu">MENU</button>
@@ -41,20 +42,185 @@
 
     <!-- MAIN -->
     <main>
+      <!-- Language -->
+      <div class="language">
+        <span class="neue">english</span>
+      </div>
+
+      <!-- Jumbo section -->
       <section id="jumbo">
         <div class="jumbo-container">
-          <img class="poltrona" src="img/jumbo-img/poltrona.png" alt="">
-          <img class="sedia" src="img/jumbo-img/sedia.png" alt="">
-          <img class="tre-sedie" src="img/jumbo-img/tre-sedie.png" alt="">
-          <img class="spalliere" src="img/jumbo-img/spalliere.png" alt="">
+          <img class="sedia" src="img/products/sedia.png" alt="">
+          <img class="poltrona" src="img/products/poltrona.png" alt="">
+          <img class="tre-sedie" src="img/products/tre-sedie.png" alt="">
+          <img class="spalliere" src="img/products/spalliere.png" alt="">
+        </div>
+        <div class="since">
+          <img src="img/since.png" alt="">
         </div>
       </section>
+
+      <!-- Story section -->
+      <section id="story">
+        <div class="story-container">
+          <p>
+            "Ogni prodotto racconta il nostro modo di fare le cose: l'affidabilità di una lunga tradizione,
+            l'attenzione alle materie prime, l'amore per un lavoro che ci permette di esprimere tutta la qualità del made in Italy".
+          </p>
+
+          <a href="#"><span class="neue">LEGGI LA STORIA DI LIVONI</span></a>
+        </div>
+      </section>
+
+      <!-- Philosophy section -->
+      <section id="philosophy">
+        <div class="philosophy-container">
+          <div class="col philosophy-text">
+            <p>
+              Dal 1895 progettiamo e realizziamo sedie e piccoli complementi in legno, un materiale che ispira forme e lavorazioni,
+              ma soprattutto la nostra filosofia produttiva. Crediamo nella sostenibilità
+              e usiamo risorse selezionate per creare prodotti che durano nel tempo.
+            </p>
+          </div>
+
+          <div class="col products">
+            <div class="box">
+              <img src="img/products/poltrona.png" alt="">
+              <h2 class="title-image">poltrone</h2>
+            </div>
+            <div class="box">
+              <img src="img/products/due-sedie.png" alt="">
+              <h2 class="title-image">sedie</h2>
+            </div>
+            <div class="box">
+              <img src="img/products/sedia-tavolo.png" alt="">
+              <h2 class="title-image">sgabelli</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- References section -->
+      <section id="references">
+        <div class="references-container">
+          <div class="box">
+            <img src="img/restaurant.jpg" alt="">
+            <h2 class="title-image">references</h2>
+            <img class="arrow" src="img/arrow.png" alt="">
+          </div>
+
+          <h6 class="neue">RISTORANTE LONDRA – GB</h6>
+        </div>
+      </section>
+
+      <!-- Magazine section -->
+      <section id="magazine">
+        <div class="magazine-container">
+          <div class="row">
+            <div class="heading">
+              <h2 class="neue">Magazine</h2>
+              <p>
+                Il magazine è il nostro diario digitale.
+                <br>
+                Racconta ispirazioni e novità dal mondo Livoni.
+              </p>
+            </div>
+
+            <div class="arrows">
+              <img src="img/arrow-left.png" alt="">
+              <img src="img/arrow-right.png" alt="">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="image-card">
+                  <img class="img-left" src="img/products/sedia-1.png" alt="">
+                </div>
+                <div class="description">
+                  <h3>18.05.2020</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna
+                  </p>
+                  <a href="#">leggi</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="image-card">
+                  <img class="img-center" src="img/products/sedia-2.png" alt="">
+                </div>
+                <div class="description">
+                  <h3>18.05.2020</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna
+                  </p>
+                  <a href="#">leggi</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="image-card">
+                  <img class="img-right" src="img/products/sedia-3.png" alt="">
+                </div>
+                <div class="description">
+                  <h3>18.05.2020</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna
+                  </p>
+                  <a href="#">leggi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter section -->
+      <section id="newsletter">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+        <h2>newsletter <img src="img/arrow-up.png" alt=""></h2>
+      </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer>
+      <div class="heading">
+        <h2>contattaci</h2>
+      </div>
 
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>LIVONI E. & figlio s.r.l.</li>
+            <li>via Papa Giovanni, 8 33040 Corno di Rosazzo (Udine) – Italy</li>
+            <li>T. +39 0432 759055 – F. +39 0432 759314</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li>Copywrite Livoni 2020  -  P.IVA 0000000000000</li>
+            <li>pec:livoni@livoni.it</li>
+            <li>Privacy & Cookies  - Credits</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <span>Seguici su: <i class="fab fa-instagram"></i> <i class="fab fa-facebook-f"></i></span>
+        </div>
+      </div>
     </footer>
 
+    <script src="dist/app.js"></script>
   </body>
 </html>
