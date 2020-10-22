@@ -1,1 +1,6 @@
-
+// STYLE BUTTONS
+@mixin transparent_button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

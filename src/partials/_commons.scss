@@ -6,13 +6,21 @@
   font-family: $primary-font;
 }
 
-/* ________ REGOLE GENERALI ________ */
-body {
-  font-size: 100px;
-  background-color: red; // TODO: cancellare
-}
-
+/* ________ GENERAL ________ */
 /* Secondary font class */
 .neue {
   font-family: $secondary-font;
+}
+
+body {
+  background-color: $body-color;
+}
+
+// img {
+//   width: 100%;
+//   display: block;
+// }
+
+.container {
+  padding: 0 216px;
 }
