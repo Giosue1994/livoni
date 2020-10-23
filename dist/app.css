@@ -147,6 +147,7 @@ header nav #logo img {
 /* MAIN */
 
 main {
+  overflow: hidden;
   /* JUMBO SECTION */
   /* STORY SECTION */
   /* PHILOSOPHY SECTION */
