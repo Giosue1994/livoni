@@ -31,8 +31,36 @@ header {
     #logo {
       img {
         position: relative;
-        left: -17%;
+        vertical-align: bottom;
       }
+    }
+  }
+
+  /////////////////// MEDIA QUERY ///////////////////
+  
+  @media screen and (max-width: 800px) {
+    .container {
+      padding: 0 30px;
+    }
+
+    nav {
+      padding-top: 30px;
+
+      button {
+        font-size: $small-size;
+      }
+
+      #logo {
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1000px) {
+    .container {
+      padding: 0 80px;
     }
   }
 }

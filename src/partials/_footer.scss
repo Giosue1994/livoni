@@ -2,11 +2,11 @@
 footer {
   background-color: #90968B;
   color: white;
-  padding: 120px 0;
+  padding: 0 0 120px;
 
   .heading {
     text-align: center;
-    padding: 200px 0;
+    padding: 200px 0 300px;
     h2 {
       display: inline-block;
       font-size: 143px;
@@ -32,6 +32,34 @@ footer {
       i {
         font-size: $small-size;
         padding: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    padding: 20px 50px;
+
+    .heading {
+      padding: 0 0 20px;
+
+      h2 {
+        font-size: 69px;
+      }
+    }
+
+    .row {
+      flex-direction: column;
+      text-align: center;
+
+      .col {
+        ul {
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        li, span {
+          font-size: 16px;
+        }
       }
     }
   }

@@ -7,9 +7,10 @@ main {
     .jumbo-container {
       position: relative;
       height: 570px;
+      // overflow: hidden;
 
       img {
-        width: 19%;
+        width: 360px;
         @include center_element;
         transform: translate(-50%, 0);
 
@@ -17,16 +18,16 @@ main {
           top: -50px;
         }
         &#poltrona {
-          top: 15px;
-          left: 55%;
+          top: -3px;
+          left: 53%;
         }
         &#tre-sedie {
-          width: 28%;
-          top: 65px;
+          top: 25px;
+          left: 44%;
         }
         &#spalliere {
           top: -40px;
-          left: 57%
+          left: 57%;
         }
       }
     }
@@ -207,11 +208,11 @@ main {
                 }
                 &.img-center {
                   height: 350px;
-                  object-position: 0 80%;
+                  object-position: 50% 85%;
                 }
                 &.img-right {
                   height: 450px;
-                  object-position: 0 45%;
+                  object-position: 50% 45%;
                 }
               }
             }
@@ -272,6 +273,165 @@ main {
 
       img {
         vertical-align: super;
+      }
+    }
+  }
+
+/////////// MEDIA QUERY //////////////
+
+  @media screen and (max-width: 800px) {
+    /* JUMBO SECTION */
+    #jumbo {
+      margin-top: 200px;
+      // overflow-x: hidden;
+    }
+
+    #story {
+      margin: 235px 0 50px;
+      .story-container {
+        p {
+          width: 70%;
+          margin: auto;
+          padding-bottom: 50px;
+          font-size: $primary-font-size;
+        }
+      }
+    }
+
+    #philosophy {
+      .philosophy-container {
+
+        .col {
+          &.philosophy-text {
+            padding: 30px;
+
+            #fixed-target {
+              font-size: 23px;
+            }
+          }
+          &.products {
+            padding-bottom: 30px;
+
+            .box {
+              padding: 30px 30px 0;
+              img {
+                width: 100%;
+                padding-top: 0;
+              }
+
+              .title-image {
+                font-size: $medium-size;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #references {
+      .references-container {
+        padding: 60px;
+
+        .box {
+          padding-bottom: 0;
+
+          img {
+            width: 100%;
+            display: block;
+            padding-bottom: 30px;
+          }
+
+          .arrow {
+            display: none;
+          }
+        }
+      }
+    }
+
+    #magazine {
+      .magazine-container {
+        .row {
+          flex-direction: column;
+          &:first-of-type {
+            padding: 30px;
+
+            .heading {
+              align-items: center;
+
+              h2 {
+                font-size: $primary-font-size;
+              }
+
+              p {
+                padding-left: 30px;
+              }
+            }
+
+            .arrows {
+              display: none;
+            }
+          }
+
+          .col {
+            width: 100%;
+            padding: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1400px) {
+    #story {
+      margin: 235px 0;
+    }
+
+    #philosophy {
+      .philosophy-container {
+        .col {
+          &.philosophy-text {
+            padding: 80px;
+
+            #fixed-target {
+              font-size: $primary-font-size;
+            }
+          }
+          &.products {
+            padding-bottom: 50px;
+
+            .box {
+              padding: 50px 50px 0;
+              img {
+                width: 100%;
+                padding-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #references {
+      .references-container {
+        .box {
+          .arrow {
+            display: none;
+          }
+        }
+      }
+    }
+
+    #magazine {
+      .magazine-container {
+        .row {
+          &:first-of-type {
+            padding: 30px;
+          }
+
+          .col {
+            padding: 30px;
+          }
+        }
       }
     }
   }
