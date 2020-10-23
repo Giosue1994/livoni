@@ -13,18 +13,18 @@ main {
         @include center_element;
         transform: translate(-50%, 0);
 
-        &.sedia {
+        &#sedia {
           top: -50px;
         }
-        &.poltrona {
+        &#poltrona {
           top: 15px;
           left: 55%;
         }
-        &.tre-sedie {
+        &#tre-sedie {
           width: 28%;
           top: 65px;
         }
-        &.spalliere {
+        &#spalliere {
           top: -40px;
           left: 57%
         }
@@ -49,8 +49,20 @@ main {
         font-size: $medium-size;
       }
 
-      span {
-        font-size: $small-size;
+      a {
+        position: relative;
+        span {
+          font-size: $small-size;
+
+          &::after {
+            @include underline_link;
+            top: 90%;
+            background-color: black;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -59,18 +71,20 @@ main {
   #philosophy {
     .philosophy-container {
       position: relative;
+      display: flex;
 
       .col {
         width: 50%;
 
         &.philosophy-text {
           padding: 230px;
-          position: absolute;
-          top: 0;
-          width: 50%;
+
+          #fixed-target {
+            position: sticky;
+            top: 40%;
+          }
         }
         &.products {
-          float: right;
           background-color: #D1CCC7;
           display: flex;
           flex-direction: column;
@@ -88,6 +102,10 @@ main {
             .title-image {
               top: 30%;
             }
+
+            &:hover .title-image::after {
+              width: 100%;
+            }
           }
         }
       }
@@ -96,7 +114,6 @@ main {
 
   /* REFERENCES SECTION */
   #references {
-    clear: both;
 
     .references-container {
       background-color: #BCBCBC;
@@ -109,6 +126,10 @@ main {
         justify-content: center;
         align-items: center;
         padding-bottom: 60px;
+
+        &:hover .title-image::after {
+          width: 100%;
+        }
 
         img {
           width: 70%;
@@ -196,12 +217,25 @@ main {
             }
 
             .description {
+
               p {
                 padding: 10px 0;
               }
 
               a {
-                font-size: $small-size;
+                position: relative;
+                span {
+                  font-size: $small-size;
+
+                  &::after {
+                    @include underline_link;
+                    top: 100%;
+                    background-color: black;
+                  }
+                  &:hover::after {
+                    width: 100%;
+                  }
+                }
               }
             }
           }
@@ -223,7 +257,18 @@ main {
     }
 
     h2 {
+      position: relative;
       font-size: 69px;
+      display: inline-block;
+
+      &::after {
+        @include underline_link;
+        top: 100%;
+        background-color: black;
+      }
+      &:hover::after {
+        width: 100%;
+      }
 
       img {
         vertical-align: super;

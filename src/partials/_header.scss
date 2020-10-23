@@ -10,12 +10,22 @@ header {
   nav {
     display: flex;
     justify-content: space-between;
-    padding: 113px 0;
+    padding-top: 113px;
 
     button {
       @include transparent_button;
       font-weight: bold;
       cursor: pointer;
+      position: relative;
+
+      &::after {
+        @include underline_link;
+        background-color: black;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
     }
 
     #logo {

@@ -16,6 +16,10 @@
   font-family: Neue-similar;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F7F7F5;
 }
@@ -55,6 +59,18 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.title-image::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transition: width 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  top: 90%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -66,7 +82,7 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 113px 0;
+  padding-top: 113px;
 }
 
 header nav button {
@@ -75,6 +91,22 @@ header nav button {
   outline: none;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+}
+
+header nav button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transition: width 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  background-color: black;
+}
+
+header nav button:hover::after {
+  width: 100%;
 }
 
 header nav #logo img {
@@ -111,21 +143,21 @@ main #jumbo .jumbo-container img {
   transform: translate(-50%, 0);
 }
 
-main #jumbo .jumbo-container img.sedia {
+main #jumbo .jumbo-container img#sedia {
   top: -50px;
 }
 
-main #jumbo .jumbo-container img.poltrona {
+main #jumbo .jumbo-container img#poltrona {
   top: 15px;
   left: 55%;
 }
 
-main #jumbo .jumbo-container img.tre-sedie {
+main #jumbo .jumbo-container img#tre-sedie {
   width: 28%;
   top: 65px;
 }
 
-main #jumbo .jumbo-container img.spalliere {
+main #jumbo .jumbo-container img#spalliere {
   top: -40px;
   left: 57%;
 }
@@ -146,12 +178,33 @@ main #story .story-container p {
   font-size: 48px;
 }
 
-main #story .story-container span {
+main #story .story-container a {
+  position: relative;
+}
+
+main #story .story-container a span {
   font-size: 19px;
+}
+
+main #story .story-container a span::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transition: width 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  top: 90%;
+  background-color: black;
+}
+
+main #story .story-container a span:hover::after {
+  width: 100%;
 }
 
 main #philosophy .philosophy-container {
   position: relative;
+  display: flex;
 }
 
 main #philosophy .philosophy-container .col {
@@ -160,13 +213,15 @@ main #philosophy .philosophy-container .col {
 
 main #philosophy .philosophy-container .col.philosophy-text {
   padding: 230px;
-  position: absolute;
-  top: 0;
-  width: 50%;
+}
+
+main #philosophy .philosophy-container .col.philosophy-text #fixed-target {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40%;
 }
 
 main #philosophy .philosophy-container .col.products {
-  float: right;
   background-color: #D1CCC7;
   display: flex;
   flex-direction: column;
@@ -187,8 +242,8 @@ main #philosophy .philosophy-container .col.products .box .title-image {
   top: 30%;
 }
 
-main #references {
-  clear: both;
+main #philosophy .philosophy-container .col.products .box:hover .title-image::after {
+  width: 100%;
 }
 
 main #references .references-container {
@@ -203,6 +258,10 @@ main #references .references-container .box {
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
+}
+
+main #references .references-container .box:hover .title-image::after {
+  width: 100%;
 }
 
 main #references .references-container .box img {
@@ -295,7 +354,27 @@ main #magazine .magazine-container .row .col .card .description p {
 }
 
 main #magazine .magazine-container .row .col .card .description a {
+  position: relative;
+}
+
+main #magazine .magazine-container .row .col .card .description a span {
   font-size: 19px;
+}
+
+main #magazine .magazine-container .row .col .card .description a span::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transition: width 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  top: 100%;
+  background-color: black;
+}
+
+main #magazine .magazine-container .row .col .card .description a span:hover::after {
+  width: 100%;
 }
 
 main #newsletter {
@@ -311,7 +390,25 @@ main #newsletter p {
 }
 
 main #newsletter h2 {
+  position: relative;
   font-size: 69px;
+  display: inline-block;
+}
+
+main #newsletter h2::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  transition: width 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  top: 100%;
+  background-color: black;
+}
+
+main #newsletter h2:hover::after {
+  width: 100%;
 }
 
 main #newsletter h2 img {
@@ -332,7 +429,9 @@ footer .heading {
 }
 
 footer .heading h2 {
+  display: inline-block;
   font-size: 143px;
+  border-bottom: 2px solid white;
 }
 
 footer .row {

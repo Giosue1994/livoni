@@ -13,6 +13,10 @@
   font-family: $secondary-font;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $body-color;
 }
@@ -47,4 +51,10 @@ p {
   @include center_element;
   font-size: 69px;
   color: rgba(255, 255, 255, 0.6);
+
+  &::after {
+    @include underline_link;
+    top: 90%;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
 }
