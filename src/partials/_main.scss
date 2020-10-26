@@ -1,40 +1,35 @@
 /* MAIN */
 main {
-  // overflow: hidden;
   /* JUMBO SECTION */
   #jumbo {
-    margin-top: 282px;
+    margin-top: 200px;
 
     .jumbo-container {
       position: relative;
-      height: 570px;
 
       img {
-        width: 360px;
-        @include center_element;
-        transform: translate(-50%, 0);
+        width: calc(50vh / 1.25);
+        position: absolute;
 
         &#sedia {
-          top: -50px;
+          top: 60px;
+          left: 10%;
         }
         &#poltrona {
-          top: -3px;
-          left: 53%;
+          top: -20px;
+          left: 30%;
         }
         &#tre-sedie {
-          top: 25px;
-          left: 44%;
+          top: 20px;
+          left: 50%;
         }
         &#spalliere {
-          top: -40px;
-          left: 57%;
+          top: 50px;
+          left: 70%;
         }
       }
     }
 
-    .since {
-      text-align: center;
-    }
   }
 
   /* STORY SECTION */
@@ -43,6 +38,13 @@ main {
     text-align: center;
 
     .story-container {
+      .since {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        margin-bottom: 200px;
+      }
+
       p {
         width: 75%;
         margin: auto;

@@ -93,71 +93,58 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// import Scrollbar from 'smooth-scrollbar';
+//
+// let options = {
+//   damping: 0.05,
+// }
+//
+// let wrapScrollbar = document.querySelector('#wrapper');
+//
+// Scrollbar.init(wrapScrollbar, options);
+var sedia = $('#sedia');
+var poltrona = $('#poltrona');
+var treSedie = $('#tre-sedie');
+var spalliere = $('#spalliere');
+var tl = gsap.timeline();
+tl.to(spalliere, {
+  yPercent: -200
+}).to(poltrona, {
+  yPercent: -200
+}).to(treSedie, {
+  yPercent: -200
+}).to(sedia, {
+  yPercent: -200
+});
+ScrollTrigger.create({
+  animation: tl,
+  trigger: '#img-wrapper',
+  // markers: true,
+  start: '-200px top',
+  end: function end() {
+    return '+=' + document.querySelector('#wrapper').offsetHeight;
+  },
+  scrub: true,
+  pin: '#jumbo'
+});
 $(document).ready(function () {
   $(window).scroll(function () {
-    // allo scroll della pagina,
-    // se i px sono minore di 200 nascondo il logo
+    // VARIABILI
+    var logo = $('#logo img');
+    var sedia = $('#sedia');
+    var poltrona = $('#poltrona');
+    var treSedie = $('#tre-sedie');
+    var spalliere = $('#spalliere'); // allo scroll della pagina,
+    // se i pixel sono minore di 200 nascondo il logo
     // altrimenti torna come prima
-    if ($(this).scrollTop() > 200) {
-      $('#logo img').css({
-        opacity: '0',
-        transition: 'all 0.5s ease'
-      });
-    } else {
-      $('#logo img').css({
-        opacity: '1',
-        transition: 'all 0.5s ease'
-      });
-    }
 
-    if ($(this).scrollTop() > 60) {
-      // EFFETTI IMMAGINI JUMBO
-      // allo scroll le immagine del jumbo cambiano posizione e si rimpiccioliscono
-      $('#sedia').css({
-        left: '20%',
-        top: '100px',
-        width: '300px',
-        transition: 'all 0.5s ease'
-      });
-      $('#poltrona').css({
-        left: '40%',
-        top: '100px',
-        width: '300px',
-        transition: 'all 0.5s ease'
-      });
-      $('#tre-sedie').css({
-        left: '60%',
-        top: '100px',
-        width: '300px',
-        transition: 'all 0.5s ease'
-      });
-      $('#spalliere').css({
-        left: '80%',
-        top: '100px',
-        width: '300px',
-        transition: 'all 0.5s ease'
+    if ($(this).scrollTop() > 900) {
+      logo.css({
+        opacity: '0'
       });
     } else {
-      // EFFETTI IMMAGINI JUMBO
-      $('#sedia').css({
-        left: '50%',
-        top: '-50px',
-        width: '360px'
-      });
-      $('#poltrona').css({
-        left: '53%',
-        top: '-3px',
-        width: '360px'
-      });
-      $('#tre-sedie').css({
-        left: '44%',
-        top: '25px',
-        width: '360px'
-      });
-      $('#spalliere').css({
-        left: '57%',
-        top: '-40px',
-        width: '360px'
+      logo.css({
+        opacity: '1'
       });
     }
   });

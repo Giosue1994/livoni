@@ -24,6 +24,10 @@ body {
   background-color: #F7F7F5;
 }
 
+#wrapper {
+  height: 100vh;
+}
+
 .language {
   position: fixed;
   top: 50%;
@@ -118,6 +122,7 @@ header nav button:hover::after {
 header nav #logo img {
   position: relative;
   vertical-align: bottom;
+  transition: 0.5s ease;
 }
 
 @media screen and (max-width: 800px) {
@@ -156,49 +161,48 @@ main {
 }
 
 main #jumbo {
-  margin-top: 282px;
+  margin-top: 200px;
 }
 
 main #jumbo .jumbo-container {
   position: relative;
-  height: 570px;
 }
 
 main #jumbo .jumbo-container img {
-  width: 360px;
+  width: calc(50vh / 1.25);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform: translate(-50%, 0);
 }
 
 main #jumbo .jumbo-container img#sedia {
-  top: -50px;
+  top: 60px;
+  left: 10%;
 }
 
 main #jumbo .jumbo-container img#poltrona {
-  top: -3px;
-  left: 53%;
+  top: -20px;
+  left: 30%;
 }
 
 main #jumbo .jumbo-container img#tre-sedie {
-  top: 25px;
-  left: 44%;
+  top: 20px;
+  left: 50%;
 }
 
 main #jumbo .jumbo-container img#spalliere {
-  top: -40px;
-  left: 57%;
-}
-
-main #jumbo .since {
-  text-align: center;
+  top: 50px;
+  left: 70%;
 }
 
 main #story {
   margin: 235px;
   text-align: center;
+}
+
+main #story .story-container .since {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 200px;
 }
 
 main #story .story-container p {

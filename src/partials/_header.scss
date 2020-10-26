@@ -32,12 +32,13 @@ header {
       img {
         position: relative;
         vertical-align: bottom;
+        transition: 0.5s ease,
       }
     }
   }
 
   /////////////////// MEDIA QUERY ///////////////////
-  
+
   @media screen and (max-width: 800px) {
     .container {
       padding: 0 30px;

@@ -21,6 +21,10 @@ body {
   background-color: $body-color;
 }
 
+#wrapper {
+  height: 100vh;
+}
+
 .language {
   position: fixed;
   top: 50%;
