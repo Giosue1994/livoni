@@ -24,10 +24,6 @@ body {
   background-color: #F7F7F5;
 }
 
-#wrapper {
-  height: 100vh;
-}
-
 .language {
   position: fixed;
   top: 50%;
@@ -84,7 +80,7 @@ p {
 header {
   position: fixed;
   width: 100%;
-  z-index: 1234;
+  z-index: 123;
   top: 0;
   left: 0;
 }
@@ -161,36 +157,44 @@ main {
 }
 
 main #jumbo {
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 main #jumbo .jumbo-container {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
 main #jumbo .jumbo-container img {
   width: calc(50vh / 1.25);
-  position: absolute;
+  position: relative;
 }
 
 main #jumbo .jumbo-container img#sedia {
   top: 60px;
-  left: 10%;
 }
 
 main #jumbo .jumbo-container img#poltrona {
   top: -20px;
-  left: 30%;
 }
 
 main #jumbo .jumbo-container img#tre-sedie {
   top: 20px;
-  left: 50%;
 }
 
 main #jumbo .jumbo-container img#spalliere {
   top: 50px;
-  left: 70%;
+}
+
+main #jumbo .jumbo-container .title {
+  transition: 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 52.3%;
+  transform: translate(-50%, -50%);
 }
 
 main #story {
@@ -201,6 +205,7 @@ main #story {
 main #story .story-container .since {
   text-align: center;
   width: 100%;
+  left: 45px;
   position: relative;
   margin-bottom: 200px;
 }
