@@ -24,6 +24,10 @@ body {
   background-color: #F7F7F5;
 }
 
+.c-scrollbar {
+  z-index: 98765;
+}
+
 .language {
   position: fixed;
   top: 50%;
